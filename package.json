@@ -1,0 +1,66 @@
+{
+  "name": "@juancastingo/http-diagnostics-middleware",
+  "version": "0.1.0",
+  "description": "Zero-overhead HTTP diagnostics middleware for Express and Fastify with high-precision timing, anomaly detection, payload monitoring, and secret sanitization",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "http",
+    "middleware",
+    "express",
+    "fastify",
+    "diagnostics",
+    "observability",
+    "latency",
+    "telemetry",
+    "anomaly-detection",
+    "redaction"
+  ],
+  "author": "Juan Castin <juancastingo@users.noreply.github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juancastingo/http-diagnostics-middleware.git"
+  },
+  "bugs": {
+    "url": "https://github.com/juancastingo/http-diagnostics-middleware/issues"
+  },
+  "homepage": "https://github.com/juancastingo/http-diagnostics-middleware#readme",
+  "peerDependencies": {
+    "express": "^4.18.0 || ^5.0.0",
+    "fastify": "^4.0.0 || ^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "express": {
+      "optional": true
+    },
+    "fastify": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "tsup": "^8.1.0",
+    "tsx": "^4.15.0",
+    "typescript": "^5.4.5"
+  }
+}
